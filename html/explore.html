@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/explore.css">
+  <title>Explore cars</title>
+</head>
+
+<body>
+  <section class="site-container">
+    <header class="site-header">
+      <h1 class="site-title">Explore Our Selection</h1>
+    </header>
+
+     <form action="/search" method="get" class="form">
+      <label for="brand">Brand:</label>
+      <select id="brand" name="brand">
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="mercedes">Mercedes-Benz</option>
+        <option value="volkswagen">Volkswagen</option>
+        <option value="toyota">Toyota</option>
+      </select>
+        <label for="model">Model:</label>
+        <select id="model" name="model"></select><br>
+      </select> 
+      <button type="submit">Search</button>
+    </form>
+
+    <section class="car-listings">
+      <h2>Cars for sale!</h2>
+      <div class="car-list">
+        <div class="car">
+          <img src="../images/audi photo.jpg" alt="Car 1">
+          <h3 class="car-model">Audi SQ7 4.0 TFSI</h3>
+          <p class="car-price">Price: $100,000</p>
+          <p class="car-description">Unleash exhilarating power and experience superior comfort with the Audi SQ7 4.0
+            TFSI. This high-performance SUV boasts a powerful twin-turbo V8 engine for a thrilling driving experience,
+            while its luxurious interior with premium materials ensures a comfortable ride for everyone. Combining
+            versatility with style, the SQ7 offers spacious seating for up to seven and ample cargo space, making it
+            perfect for families or those seeking a dynamic vehicle.</p>
+          <button class="car-details-button" onclick="redirectToCarDetails('audi')">See Details</button>
+        </div>
+        <div class="car">
+          <img src="../images/mercedes main.jpg" alt="Car 1">
+          <h3 class="car-model">Mercedes-Benz GLE 53</h3>
+          <p class="car-price">Price: $125,000</p>
+          <p class="car-description">The Mercedes-Benz GLE 63 is a luxury SUV known for its powerful performance,
+            elegant design, and advanced features. Priced at $125,000, it blends sportiness with luxury, offering a
+            smooth ride for city commutes and long trips. Its sleek exterior, with the iconic Mercedes logo, exudes
+            sophistication. Under the hood, its high-performance engine ensures thrilling acceleration and
+            handling.Whether for style, performance, or refinement, the GLE 63 caters to discerning drivers.</p>
+          <button class="car-details-button" onclick="redirectToCarDetails('mercedes')">See Details</button>
+        </div>
+
+        <div class="car">
+          <img src="../images/bmw Home.jpg" alt="Car 1">
+          <h3 class="car-model">BMW X6 40d</h3>
+          <p class="car-price">Price: 98.500$</p>
+          <p class="car-description">The BMW X6 40d is a luxurious and powerful SUV, featuring cutting-edge technology
+            and sleek design. With its powerful engine and comfortable interior, it offers a thrilling driving
+            experience for those who demand the best.The BMW X6 40d is a top-of-the-line SUV that combines luxury,
+            performance, and style. Whether navigating city streets or cruising on the highway, the BMW X6 40d delivers
+            unparalleled comfort and performance.</p>
+          <button class="car-details-button" onclick="redirectToCarDetails('bmw')">See Details</button>
+        </div>
+
+        <div class="car">
+          <img src="../images/porsche home.jpg" alt="Car 1">
+          <h3 class="car-model">Porsche Taycan 4S Performance Plus</h3>
+          <p class="car-price">Price: $130,000</p>
+          <p class="car-description">The Porsche Taycan 4S Performance Plus is an electric sports car that combines
+            exhilarating performance with luxurious comfort. With its sleek design and cutting-edge technology, this
+            vehicle delivers an unmatched driving experience. Experience the future of automotive engineering with the
+            Porsche Taycan 4S Performance Plus.Unleash unparalleled power and precision on the road as you command.</p>
+          <button class="car-details-button" onclick="redirectToCarDetails('porsche')">See Details</button>
+        </div>
+        <div class="car">
+          <img src="../images/PorschenHome.jpg" alt="Car 1">
+          <h3 class="car-model">Car Model 1</h3>
+          <p class="car-price">Price: $10,000</p>
+          <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button class="car-details-button" onclick="redirectToCarDetails('porscheCayen')">See Details</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <h2>Premium Services</h2>
+      <div class="service-list">
+        <div class="service">
+          <img src="../images/car-maintenance-services.jpeg" alt="Car Maintenance Service" class="service-image">
+          <h3 class="service-title">Car Maintenance & Repair</h3>
+          <p class="service-description">Our certified technicians provide comprehensive car maintenance and repair
+            services to keep your vehicle running smoothly.</p>
+          <a href="#" class="service-link">Learn More</a>
+        </div>
+        <div class="service">
+          <img src="../images/car-road-assistance.webp" alt="Roadside Assistance Service" class="service-image">
+          <h3 class="service-title">24/7 Roadside Assistance</h3>
+          <p class="service-description">Never get stranded! We offer 24/7 roadside assistance for peace of mind on the
+            road.</p>
+          <a href="#" class="service-link">Learn More</a>
+        </div>
+        <div class="service">
+          <img src="../images/car-professional car detailing.jpg" alt="Car Detailing Service" class="service-image">
+          <h3 class="service-title">Professional Car Detailing</h3>
+          <p class="service-description">Restore your car's shine with our professional detailing services, both
+            interior and exterior.</p>
+          <a href="#" class="service-link">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promotions">
+      <h2>Promotions & Special Offers</h2>
+      <div class="promotion-list">
+        <div class="promotion">
+          <h3 class="promotion-title">10% Off Two Cars</h3>
+          <p class="promotion-description">Get a 10% discount when you purchase two cars. Limited time offer!</p>
+          <a href="#" class="promotion-link">Learn More</a>
+        </div>
+        <div class="promotion">
+          <h3 class="promotion-title">Free Car Wash with Oil Change</h3>
+          <p class="promotion-description">Get a free car wash with every oil change service.</p>
+          <a href="#" class="promotion-link">Learn More</a>
+        </div>
+        <div class="promotion">
+          <h3 class="promotion-title">Refer a Friend, Get a Reward</h3>
+          <p class="promotion-description">Refer a friend to our dealership and receive a $50 gift card when they
+            purchase a car.</p>
+          <a href="#" class="promotion-link">Learn More</a>
+        </div>
+        <div class="promotion">
+          <h3 class="promotion-title">Seasonal Specials</h3>
+          <p class="promotion-description">Check out our seasonal specials for exclusive discounts on select vehicles.
+          </p>
+          <a href="#" class="promotion-link">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-info">
+      <h2>Contact Information</h2>
+      <p class="contact-phone">Phone: 123-456-789</p>
+      <p class="contact-email">Email: info@example.com</p>
+      <p class="contact-address">Address: 123 Slaveikov Street, Burgas, Bulgaria</p>
+    </section>
+
+    <section class="form-container">
+      <h2>To inquire or book a test drive of our cars</h2>
+      <form id="reservationForm" action="/submitquestion" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required='true' placeholder="Enter your name!"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="true" placeholder="Enter your Email!"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required="true"
+          placeholder="Please ask your question or submit a vehicle inquiry here!"></textarea><br><br>
+
+        <button type="submitquestion" id="submitBtn">Submit</button>
+      </form>
+    </section>
+  </section>
+  <script src="../javascript/car-details.js"></script>
+  <script src="../javascript/form-handler.js"></script>
+  <script src="../javascript/explore.js"></script>
+</body>
+
+</html>

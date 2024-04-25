@@ -1,0 +1,118 @@
+.section-banner{
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 6em;
+}
+
+.section-banner h2{
+    font-size: 2.8em;
+    letter-spacing: 0.3em;
+}
+
+.section-banner p{
+    max-width: 30ch;
+    line-height: 1.2;
+}
+
+.section-banner a{
+    display: inline-block;
+    padding: 0.5em 1em;
+    background: rgba(208,25,25,1 );
+    color: #fff;
+    border-radius: 0.3em;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.section-welcome{
+    background: #fff;
+    min-height: 10em;
+}
+
+.section-welcome,
+.section-featured-cars{
+    padding: 2em 4em;
+}
+
+.section-welcome .cars img{
+    width: 10em;
+    height: 10em;
+    margin: 0 auto;
+}
+
+.section-featured-cars .cars .media img {
+    width: 20em; 
+    height: 15em; 
+    margin: 0 auto;
+}
+
+[class*="section-"] header h2{
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+.cars .media img {
+    transition: opacity 0.3s ease-in; 
+}
+
+.cars .media img:hover {
+    opacity: 0.8; 
+}
+
+.cars .media img:not(:hover) {
+    opacity: 0.6; 
+}
+
+.cars{
+    display: flex;
+    gap: 10em;
+}
+
+.cars li,
+.cars li span{
+    display: block;
+}
+
+.cars img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+.cars li{
+    flex:  1 1 30%;
+    text-align: center;
+}
+
+.cars .title{
+    color: rgba(210,61,97,1);
+}
+
+.cars .name
+
+.cars .desc{
+    color: #333;
+    line-height: 1.2;
+}
+
+.section-featured-cars h2{
+    color: blue;
+}
+
+.section-featured-cars .title{
+    text-transform: uppercase;
+    color: darkblue;
+}
+
+.section-featured-cars a{
+    color: black;
+}
+
+
+
