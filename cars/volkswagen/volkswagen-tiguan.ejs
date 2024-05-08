@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Volkswagen Tiguan</title>
+</head>
+<body>
+  <section class="site">
+    <header class="site-header">
+        <h1>Available Cars For Volkswagen</h1>
+    </header>
+
+    <main class="site-main">      
+          <div class="car-list-side">
+            <div class="car-list">
+                <ul>
+                    <% cars.forEach(function(car) { %>
+                    <li class="car">
+                        <div class="car-details">
+                            <h2><%= car.title %></h2>
+                            <p>Price: $<%= car.price %></p>
+                            <img src="<%= car.image %>" alt="<%= car.title %>">
+                            <div class="description">
+                                <label for="year">Year of Production: <%= car.year %></label><br>
+                                <label for="fuelType">Fuel Type: <%= car.fuelType %></label><br>
+                                <label for="power">Power: <%=car.power %></label><br>
+                                <label for="euroStandard">Euro Standard: <%=car.euroStandard %></label><br>
+                                <label for="engineCapacity">Engine Capacity [cc]: <%=car.engineCapacity %></label><br>
+                                <label for="transmission">Transmission: <%=car.transmission %></label><br>
+                                <label for="category">Category: <%=car.category %></label><br>
+                                <label for="mileage">Mileage [km]: <%=car.mileage %></label><br>
+                                <label for="color">Color: <%=car.color %></label><br>
+                            </div>
+                            <a href="/readmore/<%= car.brand %>/<%= car.model %>/<%= car.title %>" class="read-more">Read More</a>
+                        </div>
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </main>
+</section>
+
+<footer>
+    <p><strong>If you want to make an inquiry or buy the car, please fill in your personal data</strong></p>
+    <form action="/submit-form" method="post" id="submit-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required="true" placeholder="Enter your name:">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required="true" placeholder="Enter your address">
+        <label for="product">Select Product:</label>
+        <select id="product" name="product">
+</select>
+<button type="submit" id="sendBtn">Send</button>
+</form>
+</footer>
+<script src="/javascript/getCarTitles.js"></script>
+<script src="../javascript/usersValidations.js"></script>
+</body>
+</html>

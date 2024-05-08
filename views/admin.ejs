@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/admin.css">
+  <title>Admin Interface</title>
+</head>
+<body>
+  <h1>Add a New Car</h1>
+  <form id="carForm" action="/admin/add" method="POST" enctype="multipart/form-data">
+    <label for="brand">Brand:</label>
+    <select id="brand" name="brand">
+      <option value="audi">Audi</option>
+      <option value="bmw">BMW</option>
+      <option value="mercedes">Mercedes-Benz</option>
+      <option value="volkswagen">Volkswagen</option>
+      <option value="toyota">Toyota</option>
+    </select>
+    </select>
+      <label for="model">Model:</label>
+      <select id="model" name="model"></select><br>
+    </select> 
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required><br>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required><br>
+      <label for="year">Year of Production:</label>
+      <select id="year" name="year" required>
+          <option value="">Select Year</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+          <option value="2008">2008</option>
+          <option value="2007">2007</option>
+          <option value="2006">2006</option>
+          <option value="2005">2005</option>
+          <option value="2004">2004</option>
+          <option value="2003">2003</option>
+          <option value="2002">2002</option>
+          <option value="2001">2001</option>
+          <option value="2000">2000</option> 
+      </select><br>
+      <label for="power">Power:</label>
+      <input type="text" id="power" name="power" required><br>
+
+      <label for="euroStandard">Euro Standard:</label>
+      <select name="euroStandard" id="euroStandard">
+          <option value="">Select Euro Standard</option>
+          <option value="euro1">Euro 1</option>
+          <option value="euro2">Euro 2</option>
+          <option value="euro3">Euro 3</option>
+          <option value="euro4">Euro 4</option>
+          <option value="euro5">Euro 5</option>
+          <option value="euro6">Euro 6</option>
+          <option value="euro7">Euro 7</option>
+      </select><br>
+
+      <label for="engineCapacity">Engine Capacity [cc]:</label>
+      <input type="text" id="engineCapacity" name="engineCapacity" required><br>
+
+      <label for="transmission">Transmission:</label>
+      <select name="transmission" id="transmission">
+        <option value="">Select Transmission</option>
+        <option value="manual">manual</option>
+        <option value="automatic">automatic</option>
+        <option value="semi-automatic">semi-automatic</option>
+      </select><br>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">Select Category</option>
+        <option value="Cars">Cars</option>
+        <option value="Buses">Buses</option>
+        <option value="Motorcycles">Motorcycles</option>
+        <option value="Agricultural">Agricultural</option>
+        <option value="Boats">Boats</option>
+        </select><br>
+
+      <label for="mileage">Mileage [km]:</label>
+      <input type="text" id="mileage" name="mileage" required><br>
+
+      <label for="color">Color:</label>
+      <input type="text" id="color" name="color" required><br>
+
+      <label for="fuelType">Fuel Type:</label>
+      <select id="fuelType" name="fuelType" required>
+          <option value="">Select Fuel Type</option>
+          <option value="Gasoline">Gasoline</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Electric">Electric</option>
+      </select><br>
+      <label for="image">Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required multiple><br>
+      <button type="submit" id="addCarButton">Add Car</button>
+  </form>
+  <h2>Available</h2>
+  <table id="avaibleTable" class="container">
+    <thead>
+      <tr id="order-${orderId}">
+        <th id="data-car-id">Order ID</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Image</th>
+        <th>Year</th>
+        <th>FuelType</th>
+        <th>Power</th>
+        <th>Euro Standart</th>
+        <th>Engine Capacity</th>
+        <th>Transmission</th>
+        <th>Category</th>
+        <th>Mileage</th>
+        <th>Color</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id ="tableBody"></tbody>
+  </table>
+  <h2>Orders</h2>
+  <table id="ordersTable" class="container">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer Name</th>
+        <th>Address</th>
+        <th>Product</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/javascript/getPeople.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/javascript/getCars.js"></script>
+
+  <script src="/javascript/deleteCars.js"></script>    
+  <script  src="/javascript/adminValidations.js"></script>
+
+  <script src="/javascript/editCars.js"></script>
+  <script src="../javascript/explore.js"></script>
+  <script src="../javascript/explore.js"></script>
+</script>
+  </body>  
+</html>
